@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D05489D82682AACB002C882A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489D72682AACB002C882A /* AppDelegate.swift */; };
+		D05489DA2682AACB002C882A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489D92682AACB002C882A /* SceneDelegate.swift */; };
+		D05489DC2682AACB002C882A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489DB2682AACB002C882A /* ViewController.swift */; };
+		D05489DF2682AACB002C882A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05489DD2682AACB002C882A /* Main.storyboard */; };
+		D05489E22682AACB002C882A /* Smart_Notepad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D05489E02682AACB002C882A /* Smart_Notepad.xcdatamodeld */; };
+		D05489E42682AACE002C882A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05489E32682AACE002C882A /* Assets.xcassets */; };
+		D05489E72682AACE002C882A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05489E52682AACE002C882A /* LaunchScreen.storyboard */; };
+		D05489F22682AACE002C882A /* Smart_NotepadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489F12682AACE002C882A /* Smart_NotepadTests.swift */; };
+		D05489FD2682AACE002C882A /* Smart_NotepadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489FC2682AACE002C882A /* Smart_NotepadUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D05489EE2682AACE002C882A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05489CC2682AACB002C882A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D05489D32682AACB002C882A;
+			remoteInfo = "Smart Notepad";
+		};
+		D05489F92682AACE002C882A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D05489CC2682AACB002C882A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D05489D32682AACB002C882A;
+			remoteInfo = "Smart Notepad";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D05489D42682AACB002C882A /* Smart Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Notepad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05489D72682AACB002C882A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D05489D92682AACB002C882A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D05489DB2682AACB002C882A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D05489DE2682AACB002C882A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D05489E12682AACB002C882A /* Smart_Notepad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Smart_Notepad.xcdatamodel; sourceTree = "<group>"; };
+		D05489E32682AACE002C882A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D05489E62682AACE002C882A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D05489E82682AACE002C882A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D05489ED2682AACE002C882A /* Smart NotepadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart NotepadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05489F12682AACE002C882A /* Smart_NotepadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_NotepadTests.swift; sourceTree = "<group>"; };
+		D05489F32682AACE002C882A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D05489F82682AACE002C882A /* Smart NotepadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart NotepadUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05489FC2682AACE002C882A /* Smart_NotepadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_NotepadUITests.swift; sourceTree = "<group>"; };
+		D05489FE2682AACE002C882A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D05489D12682AACB002C882A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05489EA2682AACE002C882A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05489F52682AACE002C882A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D05489CB2682AACB002C882A = {
+			isa = PBXGroup;
+			children = (
+				D05489D62682AACB002C882A /* Smart Notepad */,
+				D05489F02682AACE002C882A /* Smart NotepadTests */,
+				D05489FB2682AACE002C882A /* Smart NotepadUITests */,
+				D05489D52682AACB002C882A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D05489D52682AACB002C882A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D05489D42682AACB002C882A /* Smart Notepad.app */,
+				D05489ED2682AACE002C882A /* Smart NotepadTests.xctest */,
+				D05489F82682AACE002C882A /* Smart NotepadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D05489D62682AACB002C882A /* Smart Notepad */ = {
+			isa = PBXGroup;
+			children = (
+				D05489D72682AACB002C882A /* AppDelegate.swift */,
+				D05489D92682AACB002C882A /* SceneDelegate.swift */,
+				D05489DB2682AACB002C882A /* ViewController.swift */,
+				D05489DD2682AACB002C882A /* Main.storyboard */,
+				D05489E32682AACE002C882A /* Assets.xcassets */,
+				D05489E52682AACE002C882A /* LaunchScreen.storyboard */,
+				D05489E82682AACE002C882A /* Info.plist */,
+				D05489E02682AACB002C882A /* Smart_Notepad.xcdatamodeld */,
+			);
+			path = "Smart Notepad";
+			sourceTree = "<group>";
+		};
+		D05489F02682AACE002C882A /* Smart NotepadTests */ = {
+			isa = PBXGroup;
+			children = (
+				D05489F12682AACE002C882A /* Smart_NotepadTests.swift */,
+				D05489F32682AACE002C882A /* Info.plist */,
+			);
+			path = "Smart NotepadTests";
+			sourceTree = "<group>";
+		};
+		D05489FB2682AACE002C882A /* Smart NotepadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D05489FC2682AACE002C882A /* Smart_NotepadUITests.swift */,
+				D05489FE2682AACE002C882A /* Info.plist */,
+			);
+			path = "Smart NotepadUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D05489D32682AACB002C882A /* Smart Notepad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0548A012682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart Notepad" */;
+			buildPhases = (
+				D05489D02682AACB002C882A /* Sources */,
+				D05489D12682AACB002C882A /* Frameworks */,
+				D05489D22682AACB002C882A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smart Notepad";
+			productName = "Smart Notepad";
+			productReference = D05489D42682AACB002C882A /* Smart Notepad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D05489EC2682AACE002C882A /* Smart NotepadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0548A042682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart NotepadTests" */;
+			buildPhases = (
+				D05489E92682AACE002C882A /* Sources */,
+				D05489EA2682AACE002C882A /* Frameworks */,
+				D05489EB2682AACE002C882A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D05489EF2682AACE002C882A /* PBXTargetDependency */,
+			);
+			name = "Smart NotepadTests";
+			productName = "Smart NotepadTests";
+			productReference = D05489ED2682AACE002C882A /* Smart NotepadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D05489F72682AACE002C882A /* Smart NotepadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0548A072682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart NotepadUITests" */;
+			buildPhases = (
+				D05489F42682AACE002C882A /* Sources */,
+				D05489F52682AACE002C882A /* Frameworks */,
+				D05489F62682AACE002C882A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D05489FA2682AACE002C882A /* PBXTargetDependency */,
+			);
+			name = "Smart NotepadUITests";
+			productName = "Smart NotepadUITests";
+			productReference = D05489F82682AACE002C882A /* Smart NotepadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D05489CC2682AACB002C882A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					D05489D32682AACB002C882A = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					D05489EC2682AACE002C882A = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = D05489D32682AACB002C882A;
+					};
+					D05489F72682AACE002C882A = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = D05489D32682AACB002C882A;
+					};
+				};
+			};
+			buildConfigurationList = D05489CF2682AACB002C882A /* Build configuration list for PBXProject "Smart Notepad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D05489CB2682AACB002C882A;
+			productRefGroup = D05489D52682AACB002C882A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D05489D32682AACB002C882A /* Smart Notepad */,
+				D05489EC2682AACE002C882A /* Smart NotepadTests */,
+				D05489F72682AACE002C882A /* Smart NotepadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D05489D22682AACB002C882A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05489E72682AACE002C882A /* LaunchScreen.storyboard in Resources */,
+				D05489E42682AACE002C882A /* Assets.xcassets in Resources */,
+				D05489DF2682AACB002C882A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05489EB2682AACE002C882A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05489F62682AACE002C882A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D05489D02682AACB002C882A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05489DC2682AACB002C882A /* ViewController.swift in Sources */,
+				D05489D82682AACB002C882A /* AppDelegate.swift in Sources */,
+				D05489DA2682AACB002C882A /* SceneDelegate.swift in Sources */,
+				D05489E22682AACB002C882A /* Smart_Notepad.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05489E92682AACE002C882A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05489F22682AACE002C882A /* Smart_NotepadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05489F42682AACE002C882A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05489FD2682AACE002C882A /* Smart_NotepadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D05489EF2682AACE002C882A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D05489D32682AACB002C882A /* Smart Notepad */;
+			targetProxy = D05489EE2682AACE002C882A /* PBXContainerItemProxy */;
+		};
+		D05489FA2682AACE002C882A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D05489D32682AACB002C882A /* Smart Notepad */;
+			targetProxy = D05489F92682AACE002C882A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D05489DD2682AACB002C882A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D05489DE2682AACB002C882A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D05489E52682AACE002C882A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D05489E62682AACE002C882A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D05489FF2682AACE002C882A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0548A002682AACE002C882A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0548A022682AACE002C882A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VGZS9T43Q9;
+				INFOPLIST_FILE = "Smart Notepad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-Notepad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0548A032682AACE002C882A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VGZS9T43Q9;
+				INFOPLIST_FILE = "Smart Notepad/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-Notepad";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D0548A052682AACE002C882A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VGZS9T43Q9;
+				INFOPLIST_FILE = "Smart NotepadTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-NotepadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Notepad.app/Smart Notepad";
+			};
+			name = Debug;
+		};
+		D0548A062682AACE002C882A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VGZS9T43Q9;
+				INFOPLIST_FILE = "Smart NotepadTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-NotepadTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Notepad.app/Smart Notepad";
+			};
+			name = Release;
+		};
+		D0548A082682AACE002C882A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VGZS9T43Q9;
+				INFOPLIST_FILE = "Smart NotepadUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-NotepadUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smart Notepad";
+			};
+			name = Debug;
+		};
+		D0548A092682AACE002C882A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VGZS9T43Q9;
+				INFOPLIST_FILE = "Smart NotepadUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-NotepadUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smart Notepad";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D05489CF2682AACB002C882A /* Build configuration list for PBXProject "Smart Notepad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D05489FF2682AACE002C882A /* Debug */,
+				D0548A002682AACE002C882A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0548A012682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart Notepad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0548A022682AACE002C882A /* Debug */,
+				D0548A032682AACE002C882A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0548A042682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart NotepadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0548A052682AACE002C882A /* Debug */,
+				D0548A062682AACE002C882A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0548A072682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart NotepadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0548A082682AACE002C882A /* Debug */,
+				D0548A092682AACE002C882A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D05489E02682AACB002C882A /* Smart_Notepad.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D05489E12682AACB002C882A /* Smart_Notepad.xcdatamodel */,
+			);
+			currentVersion = D05489E12682AACB002C882A /* Smart_Notepad.xcdatamodel */;
+			path = Smart_Notepad.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D05489CC2682AACB002C882A /* Project object */;
+}
