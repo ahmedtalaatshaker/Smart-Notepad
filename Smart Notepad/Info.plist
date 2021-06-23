@@ -62,5 +62,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>to sort your note according to your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>to sort your note according to your location</string>
 </dict>
 </plist>
