@@ -8,18 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="noteView" customModule="Smart_Notepad" customModuleProvider="target">
-            <connections>
-                <outlet property="conView" destination="08s-06-ad2" id="3bT-B9-AQB"/>
-                <outlet property="img" destination="Hcg-Ip-Dc6" id="gNm-Y3-a5X"/>
-                <outlet property="nearest" destination="TF0-be-nJr" id="6bs-78-J5Y"/>
-                <outlet property="noteLocation" destination="I7k-t5-2i3" id="gli-pb-vpk"/>
-                <outlet property="note_description" destination="pa5-IX-jaf" id="1wP-U8-rbg"/>
-                <outlet property="title" destination="5Pf-5c-E3J" id="nKf-Ig-sj5"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="noteView" customModule="Smart_Notepad" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -85,9 +76,6 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZk-eP-gtn">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                    <connections>
-                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="4YY-gz-JUC"/>
-                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -103,6 +91,14 @@
                 <constraint firstItem="pZk-eP-gtn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zcN-dR-noF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="conView" destination="08s-06-ad2" id="8aM-LE-bgS"/>
+                <outlet property="image" destination="Hcg-Ip-Dc6" id="ZjG-1I-1vR"/>
+                <outlet property="location" destination="I7k-t5-2i3" id="MTe-h9-Aiy"/>
+                <outlet property="nearest" destination="TF0-be-nJr" id="FDf-D1-RXu"/>
+                <outlet property="note_description" destination="pa5-IX-jaf" id="SCd-9E-6Yv"/>
+                <outlet property="title" destination="5Pf-5c-E3J" id="f57-pN-Gdv"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="143.47826086956522"/>
         </view>
     </objects>

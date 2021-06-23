@@ -15,11 +15,11 @@ class noteView: UIView {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var note_description: UILabel!
     @IBOutlet weak var nearest: UILabel!
-    @IBOutlet weak var location: UIImageView!
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var noteLocation: UIImageView!
+    @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var conView: UIView!
 
-    var delegate :noteTable?
+    var delegate :noteTapped?
     var noteObj = note(fromDictionary: [:])
     
     @IBInspectable var setNote: note? {
@@ -31,13 +31,13 @@ class noteView: UIView {
                 nearest.isHidden = false
             }
             
-            if noteObj.location != nil {
-                location.isHidden = false
+            if noteObj.lat != 0.0 && noteObj.lng != 0.0 {
+                noteLocation.isHidden = false
             }
             
             if noteObj.image != nil {
-                image.isHidden = false
-                image.image = noteObj.image
+                img.isHidden = false
+                img.image = noteObj.image
             }
         }
     }
@@ -46,6 +46,9 @@ class noteView: UIView {
         get {
             return noteObj
         }
+    }
+    @IBAction func buttonTapped(_ sender: Any) {
+        delegate?.tapped(self)
     }
     
     required init(coder aDecoder: NSCoder) {
