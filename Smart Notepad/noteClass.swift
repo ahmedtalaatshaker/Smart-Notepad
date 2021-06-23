@@ -14,13 +14,14 @@ class note:NSObject{
     var location:CLLocation?
     var image:UIImage?
     var id:Date?
-
+    var nearest:Bool?
+    
     init(fromDictionary dictionary: [String:Any]){
         title = dictionary["title"] as? String
         noteDescription = dictionary["noteDescription"] as? String
         location = dictionary["location"] as? CLLocation
         image = dictionary["image"] as? UIImage
         id = dictionary["date"] as? Date
-
+        nearest = false
     }
 }
