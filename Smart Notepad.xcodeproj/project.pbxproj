@@ -24,6 +24,7 @@
 		D0548A3C2682C1A4002C882A /* noteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A3B2682C1A4002C882A /* noteView.swift */; };
 		D0548A412682C1AD002C882A /* noteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0548A402682C1AD002C882A /* noteView.xib */; };
 		D0548A462682C205002C882A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A452682C205002C882A /* MainViewController.swift */; };
+		D0548A562682C7A9002C882A /* AllNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A552682C7A9002C882A /* AllNotesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		D0548A3B2682C1A4002C882A /* noteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteView.swift; sourceTree = "<group>"; };
 		D0548A402682C1AD002C882A /* noteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = noteView.xib; sourceTree = "<group>"; };
 		D0548A452682C205002C882A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D0548A552682C7A9002C882A /* AllNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesViewModel.swift; sourceTree = "<group>"; };
 		DEB74E07F0197DF26144F547 /* Pods-Smart NotepadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart NotepadTests.release.xcconfig"; path = "Target Support Files/Pods-Smart NotepadTests/Pods-Smart NotepadTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +164,7 @@
 				D0548A272682B573002C882A /* noteClass.swift */,
 				D0548A4A2682C738002C882A /* noteView */,
 				D0548A452682C205002C882A /* MainViewController.swift */,
+				D0548A552682C7A9002C882A /* AllNotesViewModel.swift */,
 			);
 			path = "Smart Notepad";
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				D05489E22682AACB002C882A /* Smart_Notepad.xcdatamodeld in Sources */,
 				D0548A3C2682C1A4002C882A /* noteView.swift in Sources */,
 				D0548A462682C205002C882A /* MainViewController.swift in Sources */,
+				D0548A562682C7A9002C882A /* AllNotesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
