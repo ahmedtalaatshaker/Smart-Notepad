@@ -11,17 +11,22 @@ import GoogleMaps
 class note:NSObject{
     var title:String!
     var noteDescription:String!
-    var location:CLLocation?
+    var lat:Float!
+    var lng:Float!
     var image:UIImage?
     var id:Date?
+    var distanceToCurrentLocation:Double!
     var nearest:Bool?
+    
     
     init(fromDictionary dictionary: [String:Any]){
         title = dictionary["title"] as? String
         noteDescription = dictionary["noteDescription"] as? String
-        location = dictionary["location"] as? CLLocation
+        lat = dictionary["lat"] as? Float
+        lng = dictionary["lng"] as? Float
         image = dictionary["image"] as? UIImage
         id = dictionary["date"] as? Date
         nearest = false
+        distanceToCurrentLocation = 0.0
     }
 }
