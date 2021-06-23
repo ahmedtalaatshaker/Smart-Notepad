@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24882A96C90CC64693042D9D /* Pods_Smart_Notepad_Smart_NotepadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C113064AD17E6CD7A85D6D7D /* Pods_Smart_Notepad_Smart_NotepadUITests.framework */; };
+		2F96A8D19705BC3C0EA4314F /* Pods_Smart_Notepad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25990B9C99EA0CCB9C21FCD7 /* Pods_Smart_Notepad.framework */; };
+		38DA527C7BE0CFFF73C6BD5C /* Pods_Smart_NotepadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1E480B224174D64540646E /* Pods_Smart_NotepadTests.framework */; };
 		D05489D82682AACB002C882A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489D72682AACB002C882A /* AppDelegate.swift */; };
 		D05489DA2682AACB002C882A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489D92682AACB002C882A /* SceneDelegate.swift */; };
 		D05489DC2682AACB002C882A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489DB2682AACB002C882A /* ViewController.swift */; };
@@ -16,6 +19,8 @@
 		D05489E72682AACE002C882A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05489E52682AACE002C882A /* LaunchScreen.storyboard */; };
 		D05489F22682AACE002C882A /* Smart_NotepadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489F12682AACE002C882A /* Smart_NotepadTests.swift */; };
 		D05489FD2682AACE002C882A /* Smart_NotepadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489FC2682AACE002C882A /* Smart_NotepadUITests.swift */; };
+		D0548A182682B32B002C882A /* DB_Hnadler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A172682B32B002C882A /* DB_Hnadler.swift */; };
+		D0548A282682B574002C882A /* noteClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A272682B573002C882A /* noteClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13B7C6B2A0F852F35B2827A8 /* Pods-Smart Notepad-Smart NotepadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Notepad-Smart NotepadUITests.debug.xcconfig"; path = "Target Support Files/Pods-Smart Notepad-Smart NotepadUITests/Pods-Smart Notepad-Smart NotepadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		25990B9C99EA0CCB9C21FCD7 /* Pods_Smart_Notepad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Notepad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E1E480B224174D64540646E /* Pods_Smart_NotepadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_NotepadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F7BBDB12A3552E5967A33BF /* Pods-Smart Notepad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Notepad.release.xcconfig"; path = "Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad.release.xcconfig"; sourceTree = "<group>"; };
+		5FBFFA9A88201610839CFB1D /* Pods-Smart Notepad-Smart NotepadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Notepad-Smart NotepadUITests.release.xcconfig"; path = "Target Support Files/Pods-Smart Notepad-Smart NotepadUITests/Pods-Smart Notepad-Smart NotepadUITests.release.xcconfig"; sourceTree = "<group>"; };
+		858E73B1D8E1DCACE7277AF8 /* Pods-Smart NotepadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart NotepadTests.debug.xcconfig"; path = "Target Support Files/Pods-Smart NotepadTests/Pods-Smart NotepadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A48D0996F273A4DCE778DBE /* Pods-Smart Notepad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Notepad.debug.xcconfig"; path = "Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad.debug.xcconfig"; sourceTree = "<group>"; };
+		C113064AD17E6CD7A85D6D7D /* Pods_Smart_Notepad_Smart_NotepadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Notepad_Smart_NotepadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05489D42682AACB002C882A /* Smart Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Notepad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05489D72682AACB002C882A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D05489D92682AACB002C882A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +64,9 @@
 		D05489F82682AACE002C882A /* Smart NotepadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart NotepadUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05489FC2682AACE002C882A /* Smart_NotepadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_NotepadUITests.swift; sourceTree = "<group>"; };
 		D05489FE2682AACE002C882A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0548A172682B32B002C882A /* DB_Hnadler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB_Hnadler.swift; sourceTree = "<group>"; };
+		D0548A272682B573002C882A /* noteClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteClass.swift; sourceTree = "<group>"; };
+		DEB74E07F0197DF26144F547 /* Pods-Smart NotepadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart NotepadTests.release.xcconfig"; path = "Target Support Files/Pods-Smart NotepadTests/Pods-Smart NotepadTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F96A8D19705BC3C0EA4314F /* Pods_Smart_Notepad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DA527C7BE0CFFF73C6BD5C /* Pods_Smart_NotepadTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24882A96C90CC64693042D9D /* Pods_Smart_Notepad_Smart_NotepadUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DC3677089DF597E382BFAAB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A48D0996F273A4DCE778DBE /* Pods-Smart Notepad.debug.xcconfig */,
+				5F7BBDB12A3552E5967A33BF /* Pods-Smart Notepad.release.xcconfig */,
+				13B7C6B2A0F852F35B2827A8 /* Pods-Smart Notepad-Smart NotepadUITests.debug.xcconfig */,
+				5FBFFA9A88201610839CFB1D /* Pods-Smart Notepad-Smart NotepadUITests.release.xcconfig */,
+				858E73B1D8E1DCACE7277AF8 /* Pods-Smart NotepadTests.debug.xcconfig */,
+				DEB74E07F0197DF26144F547 /* Pods-Smart NotepadTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CBBA9486229E4DB91334DE56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25990B9C99EA0CCB9C21FCD7 /* Pods_Smart_Notepad.framework */,
+				C113064AD17E6CD7A85D6D7D /* Pods_Smart_Notepad_Smart_NotepadUITests.framework */,
+				4E1E480B224174D64540646E /* Pods_Smart_NotepadTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D05489CB2682AACB002C882A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +127,8 @@
 				D05489F02682AACE002C882A /* Smart NotepadTests */,
 				D05489FB2682AACE002C882A /* Smart NotepadUITests */,
 				D05489D52682AACB002C882A /* Products */,
+				3DC3677089DF597E382BFAAB /* Pods */,
+				CBBA9486229E4DB91334DE56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +153,8 @@
 				D05489E52682AACE002C882A /* LaunchScreen.storyboard */,
 				D05489E82682AACE002C882A /* Info.plist */,
 				D05489E02682AACB002C882A /* Smart_Notepad.xcdatamodeld */,
+				D0548A172682B32B002C882A /* DB_Hnadler.swift */,
+				D0548A272682B573002C882A /* noteClass.swift */,
 			);
 			path = "Smart Notepad";
 			sourceTree = "<group>";
@@ -138,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0548A012682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart Notepad" */;
 			buildPhases = (
+				2AA5B6C504C76CED1889B448 /* [CP] Check Pods Manifest.lock */,
 				D05489D02682AACB002C882A /* Sources */,
 				D05489D12682AACB002C882A /* Frameworks */,
 				D05489D22682AACB002C882A /* Resources */,
+				74C0DC27418EA3FB9D7AE5EF /* [CP] Embed Pods Frameworks */,
+				C9EE59A8C408E02BA4336997 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -155,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0548A042682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart NotepadTests" */;
 			buildPhases = (
+				A5C56AC6A6A9076D0F78A567 /* [CP] Check Pods Manifest.lock */,
 				D05489E92682AACE002C882A /* Sources */,
 				D05489EA2682AACE002C882A /* Frameworks */,
 				D05489EB2682AACE002C882A /* Resources */,
@@ -173,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0548A072682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart NotepadUITests" */;
 			buildPhases = (
+				5AA827A1B2956F5A9B732DB3 /* [CP] Check Pods Manifest.lock */,
 				D05489F42682AACE002C882A /* Sources */,
 				D05489F52682AACE002C882A /* Frameworks */,
 				D05489F62682AACE002C882A /* Resources */,
+				30B0EC8077BECBF804143827 /* [CP] Embed Pods Frameworks */,
+				4F0DC8402986A61BB2B0159F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,12 +309,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AA5B6C504C76CED1889B448 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Notepad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30B0EC8077BECBF804143827 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad-Smart NotepadUITests/Pods-Smart Notepad-Smart NotepadUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad-Smart NotepadUITests/Pods-Smart Notepad-Smart NotepadUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad-Smart NotepadUITests/Pods-Smart Notepad-Smart NotepadUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F0DC8402986A61BB2B0159F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad-Smart NotepadUITests/Pods-Smart Notepad-Smart NotepadUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad-Smart NotepadUITests/Pods-Smart Notepad-Smart NotepadUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad-Smart NotepadUITests/Pods-Smart Notepad-Smart NotepadUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AA827A1B2956F5A9B732DB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart Notepad-Smart NotepadUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74C0DC27418EA3FB9D7AE5EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5C56AC6A6A9076D0F78A567 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Smart NotepadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9EE59A8C408E02BA4336997 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D05489D02682AACB002C882A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0548A182682B32B002C882A /* DB_Hnadler.swift in Sources */,
 				D05489DC2682AACB002C882A /* ViewController.swift in Sources */,
+				D0548A282682B574002C882A /* noteClass.swift in Sources */,
 				D05489D82682AACB002C882A /* AppDelegate.swift in Sources */,
 				D05489DA2682AACB002C882A /* SceneDelegate.swift in Sources */,
 				D05489E22682AACB002C882A /* Smart_Notepad.xcdatamodeld in Sources */,
@@ -437,6 +629,7 @@
 		};
 		D0548A022682AACE002C882A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A48D0996F273A4DCE778DBE /* Pods-Smart Notepad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -456,6 +649,7 @@
 		};
 		D0548A032682AACE002C882A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F7BBDB12A3552E5967A33BF /* Pods-Smart Notepad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +669,7 @@
 		};
 		D0548A052682AACE002C882A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 858E73B1D8E1DCACE7277AF8 /* Pods-Smart NotepadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +692,7 @@
 		};
 		D0548A062682AACE002C882A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEB74E07F0197DF26144F547 /* Pods-Smart NotepadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +715,7 @@
 		};
 		D0548A082682AACE002C882A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13B7C6B2A0F852F35B2827A8 /* Pods-Smart Notepad-Smart NotepadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -539,6 +736,7 @@
 		};
 		D0548A092682AACE002C882A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FBFFA9A88201610839CFB1D /* Pods-Smart Notepad-Smart NotepadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
