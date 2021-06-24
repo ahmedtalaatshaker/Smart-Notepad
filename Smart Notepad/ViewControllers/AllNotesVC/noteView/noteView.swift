@@ -83,7 +83,7 @@ class noteView: UIView {
         conView.layer.cornerRadius = 10
         conView.layer.masksToBounds = false
         conView.layer.shadowColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
-        conView.layer.shadowOpacity = 0.5
+        conView.layer.shadowOpacity = 0.8
         conView.layer.shadowRadius = 4
 
     }
