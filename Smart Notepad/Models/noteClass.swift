@@ -17,7 +17,7 @@ class note:NSObject{
     var id:Date?
     var distanceToCurrentLocation:Double!
     var nearest:Bool?
-    
+    var address:String?
     
     init(fromDictionary dictionary: [String:Any]){
         title = dictionary["title"] as? String
@@ -28,5 +28,7 @@ class note:NSObject{
         id = dictionary["date"] as? Date
         nearest = false
         distanceToCurrentLocation = 0.0
+        address = dictionary["address"] as? String
+
     }
 }

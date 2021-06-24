@@ -16,26 +16,25 @@ class noteTable :Object{
     @objc dynamic var note_description = ""
     @objc dynamic var lat:Float = 0.0
     @objc dynamic var lng:Float = 0.0
-    var image = UIImage()
+    @objc dynamic var image = Data()
     @objc dynamic var id = Date()
+    @objc dynamic var address = ""
 
 
     
-    static func create(title:String,description:String,lat:Float,lng:Float,image:UIImage,id:Date) -> noteTable{
+    static func create(title:String,description:String,lat:Float,lng:Float,image:UIImage?,id:Date,address:String) -> noteTable{
         let note = noteTable()
         note.title = title
         note.note_description = description
         note.lat = lat
         note.lng = lng
-        note.image = image
+        let imageData = Data(image?.pngData() ?? Data())
+        note.image = imageData
         note.id = id
-        
+        note.address = address
+
         return note
     }
-}
-
-protocol newNoteAdded {
-    func added(note:note)
 }
 
 class realmDB :NSObject{
@@ -43,9 +42,8 @@ class realmDB :NSObject{
     let realm = try! Realm()
     var allNotes = [note]()
 
-    var delegate :newNoteAdded?
-    func write(title:String,description:String,lat:Float,lng:Float,image:UIImage,id:Date){
-        let noteObj = noteTable.create(title: title, description: description, lat: lat,lng:lng, image: image, id: id)
+    func write(title:String,description:String,lat:Float,lng:Float,image:UIImage?,id:Date,address:String) -> [note]{
+        let noteObj = noteTable.create(title: title, description: description, lat: lat,lng:lng, image: image, id: id, address: address)
         
         try? realm.write{
             realm.add(noteObj)
@@ -56,10 +54,12 @@ class realmDB :NSObject{
             single_note.lng = lng
             single_note.image = image
             single_note.id = id
+            single_note.address = address
 
             allNotes.append(single_note)
-            delegate?.added(note: single_note)
         }
+        
+        return allNotes
     }
     
     func read() -> [note]{
@@ -72,8 +72,10 @@ class realmDB :NSObject{
             single_note.noteDescription = row.note_description
             single_note.lat = row.lat
             single_note.lng = row.lng
-            single_note.image = row.image
+            let imgPNG = UIImage.init(data: row.image)
+            single_note.image = imgPNG
             single_note.id = row.id
+            single_note.address = row.address
 
             allNotes.append(single_note)
         }
@@ -81,11 +83,11 @@ class realmDB :NSObject{
         return allNotes
     }
     
-    func delete(id:Date){
+    func delete(id:Date) -> [note]{
         let data = realm.objects(noteTable.self)
         for row in data {
             if row.id == id {
-                try! realm.write {
+                try? realm.write {
                     realm.delete(row)
                 }
                 break
@@ -93,9 +95,10 @@ class realmDB :NSObject{
         }
         
         allNotes.removeAll{ $0.id == id }
+        return allNotes
     }
     
-    func update(newTitle:String,newDescription:String,newLat:Float,newLng:Float,newImage:UIImage,newId:Date,id:Date){
+    func update(newTitle:String,newDescription:String,newLat:Float,newLng:Float,newImage:UIImage?,newId:Date,id:Date,address:String) -> [note]{
         let data = realm.objects(noteTable.self)
         for rowIndex in 0..<data.count {
             let row = data[rowIndex]
@@ -105,9 +108,11 @@ class realmDB :NSObject{
                     row.note_description = newDescription
                     row.lat = newLat
                     row.lng = newLng
-                    row.image = newImage
+                    let imageData = Data(newImage?.pngData() ?? Data())
+                    row.image = imageData
                     row.id = newId
-                    
+                    row.address = address
+
                     allNotes.remove(at: rowIndex)
                     allNotes.insert(convertRowToNote(row: row), at: rowIndex)
                 }
@@ -116,17 +121,21 @@ class realmDB :NSObject{
                 break
             }
         }
+        
+        return allNotes
     }
     
     func convertRowToNote(row:noteTable) -> note{
         let single_note = note(fromDictionary: [:])
         single_note.title = row.title
-        single_note.noteDescription = row.description
+        single_note.noteDescription = row.note_description
         single_note.lat = row.lat
         single_note.lng = row.lng
-        single_note.image = row.image
+        let imgPNG = UIImage.init(data: row.image)
+        single_note.image = imgPNG
         single_note.id = row.id
-        
+        single_note.address = row.address
+
         return single_note
     }
     
