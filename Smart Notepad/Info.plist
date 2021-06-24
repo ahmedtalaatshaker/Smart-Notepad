@@ -66,5 +66,7 @@
 	<string>to sort your note according to your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>to sort your note according to your location</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>to add an image to note</string>
 </dict>
 </plist>

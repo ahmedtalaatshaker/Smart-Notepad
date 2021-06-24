@@ -1,4 +1,54 @@
 PODS:
+  - CropViewController (2.6.0)
+  - DKCamera (1.6.7)
+  - DKImagePickerController (4.3.2):
+    - DKImagePickerController/Camera (= 4.3.2)
+    - DKImagePickerController/Core (= 4.3.2)
+    - DKImagePickerController/ImageDataManager (= 4.3.2)
+    - DKImagePickerController/InlineCamera (= 4.3.2)
+    - DKImagePickerController/PhotoEditor (= 4.3.2)
+    - DKImagePickerController/PhotoGallery (= 4.3.2)
+    - DKImagePickerController/Resource (= 4.3.2)
+  - DKImagePickerController/Camera (4.3.2):
+    - DKCamera
+    - DKImagePickerController/Core
+  - DKImagePickerController/Core (4.3.2):
+    - DKImagePickerController/ImageDataManager
+    - DKImagePickerController/Resource
+  - DKImagePickerController/ImageDataManager (4.3.2)
+  - DKImagePickerController/InlineCamera (4.3.2):
+    - DKCamera
+    - DKImagePickerController/Core
+  - DKImagePickerController/PhotoEditor (4.3.2):
+    - CropViewController (~> 2.5)
+    - DKImagePickerController/Core
+  - DKImagePickerController/PhotoGallery (4.3.2):
+    - DKImagePickerController/Core
+    - DKPhotoGallery
+  - DKImagePickerController/Resource (4.3.2)
+  - DKPhotoGallery (0.0.17):
+    - DKPhotoGallery/Core (= 0.0.17)
+    - DKPhotoGallery/Model (= 0.0.17)
+    - DKPhotoGallery/Preview (= 0.0.17)
+    - DKPhotoGallery/Resource (= 0.0.17)
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Core (0.0.17):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Preview
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Model (0.0.17):
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Preview (0.0.17):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Resource
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Resource (0.0.17):
+    - SDWebImage
+    - SwiftyGif
   - GoogleMaps (4.2.0):
     - GoogleMaps/Maps (= 4.2.0)
   - GoogleMaps/Base (4.2.0)
@@ -15,8 +65,13 @@ PODS:
   - RxRelay (6.1.0):
     - RxSwift (= 6.1.0)
   - RxSwift (6.1.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SwiftyGif (5.4.0)
 
 DEPENDENCIES:
+  - DKImagePickerController
   - GoogleMaps
   - RealmSwift
   - RxCocoa
@@ -24,21 +79,33 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - CropViewController
+    - DKCamera
+    - DKImagePickerController
+    - DKPhotoGallery
     - GoogleMaps
     - Realm
     - RealmSwift
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SDWebImage
+    - SwiftyGif
 
 SPEC CHECKSUMS:
+  CropViewController: 7093b39ec3cb508531b22d35773e06cecd7378d8
+  DKCamera: a902b66921fca14b7a75266feb8c7568aa7caa71
+  DKImagePickerController: b5eb7f7a388e4643264105d648d01f727110fc3d
+  DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
   GoogleMaps: eb03e327edfd70b06de1e6e321653f73712df7ad
   Realm: f08ce1a85649a41303ecfe1cbd914c62e9e6d710
   RealmSwift: 60ec49d165f23d040ab48811d8dd177e09baf4d3
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
 
-PODFILE CHECKSUM: 48544242fb8ea9c201df707014cfabe5e7506040
+PODFILE CHECKSUM: c0af0450971976c9976f4673b91b9d60d857dc2e
 
 COCOAPODS: 1.10.1

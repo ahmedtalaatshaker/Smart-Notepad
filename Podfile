@@ -8,6 +8,7 @@ target 'Smart Notepad' do
   pod 'RxCocoa'
   pod 'RealmSwift'
   pod 'GoogleMaps'
+  pod 'DKImagePickerController'
 
   # Pods for Smart Notepad
 
