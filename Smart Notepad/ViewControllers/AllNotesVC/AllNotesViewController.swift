@@ -13,15 +13,15 @@ import RxCocoa
 
 class AllNotesViewController: MainViewController,CLLocationManagerDelegate {
     
+    @IBOutlet weak var notesStack: UIStackView!
+    @IBOutlet weak var noNotesView: UIView!
+    @IBOutlet weak var addButton: UIButton!
+
     var viewModel : allNotesViewModel!
     var allNotes = [note]()
     var allSortedNote = [note]()
     var disposeBag = DisposeBag()
-    static var currentCoordinate = CLLocation()
-    @IBOutlet weak var notesStack: UIStackView!
-    
-    @IBOutlet weak var noNotesView: UIView!
-    @IBOutlet weak var addButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = allNotesViewModel()
@@ -46,6 +46,7 @@ class AllNotesViewController: MainViewController,CLLocationManagerDelegate {
     func bindToViewModel(){
         viewModel.allNotesSorted.asObservable()
             .subscribe { (notes) in
+                self.freeStack()
                 if notes.element?.count ?? 0 > 0{
                     self.noNotesView.isHidden = true
                     self.drawNotes(notes: notes.element ?? [])
@@ -68,6 +69,12 @@ class AllNotesViewController: MainViewController,CLLocationManagerDelegate {
         }
     }
     
+    func freeStack(){
+        for vi in notesStack.subviews{
+            vi.removeFromSuperview()
+        }
+    }
+    
     func initMap() {
         viewModel.locationManager = CLLocationManager()
         viewModel.locationManager.delegate = self
@@ -82,9 +89,9 @@ class AllNotesViewController: MainViewController,CLLocationManagerDelegate {
         print("locations")
         print(locations)
         if let currentLocation = locations.last {
-            AllNotesViewController.currentCoordinate = currentLocation
-            print(AllNotesViewController.currentCoordinate)
-            self.viewModel.getNearestNote(Authorized: true,location:AllNotesViewController.currentCoordinate)
+            self.viewModel.Authorized = true
+            self.viewModel.currentLocation = currentLocation
+            self.viewModel.getNearestNote(Authorized: self.viewModel.Authorized)
             
         }
     }
@@ -94,18 +101,32 @@ class AllNotesViewController: MainViewController,CLLocationManagerDelegate {
             print("authorized")
             
         }
+        
         if status == .denied {
             print("denied")
-            self.viewModel.getNearestNote(Authorized: false)
+            self.viewModel.Authorized = false
+            self.viewModel.getNearestNote(Authorized: viewModel.Authorized)
+            self.AlertWith2ButtonsAndActionFirstButton(title: "Allow Access to Location", message: "Please Allow Access to Location to get nearest note", VC: self, B1Action: {
+                if let url = URL(string:UIApplication.openSettingsURLString) {
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                }
+            }, B1Title: "Settings", B2Title: "Cancel")
         }
     }
     
+    @IBAction func addNote(_ sender: Any) {
+        viewModel.openNoteDetails(vc: self,viewModel:viewModel)
+    }
     
 }
 
 extension AllNotesViewController:noteTapped{
     func tapped(_ noteView: noteView) {
         print("tapped")
+        viewModel.openNoteDetails(note:noteView.getNote!,vc: self,viewModel:viewModel)
+        
     }
     
     

@@ -25,6 +25,11 @@
 		D0548A412682C1AD002C882A /* noteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0548A402682C1AD002C882A /* noteView.xib */; };
 		D0548A462682C205002C882A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A452682C205002C882A /* MainViewController.swift */; };
 		D0548A562682C7A9002C882A /* AllNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A552682C7A9002C882A /* AllNotesViewModel.swift */; };
+		D0F9B048268322A900060EBE /* noteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B047268322A900060EBE /* noteDetailsViewController.swift */; };
+		D0F9B050268322B100060EBE /* noteDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F9B04F268322B100060EBE /* noteDetailsViewController.storyboard */; };
+		D0F9B06B268423AE00060EBE /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F9B069268423AD00060EBE /* MapViewController.storyboard */; };
+		D0F9B06C268423AE00060EBE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B06A268423AE00060EBE /* MapViewController.swift */; };
+		D0F9B0712684440B00060EBE /* noteDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B0702684440B00060EBE /* noteDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +79,11 @@
 		D0548A402682C1AD002C882A /* noteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = noteView.xib; sourceTree = "<group>"; };
 		D0548A452682C205002C882A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D0548A552682C7A9002C882A /* AllNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesViewModel.swift; sourceTree = "<group>"; };
+		D0F9B047268322A900060EBE /* noteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteDetailsViewController.swift; sourceTree = "<group>"; };
+		D0F9B04F268322B100060EBE /* noteDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = noteDetailsViewController.storyboard; sourceTree = "<group>"; };
+		D0F9B069268423AD00060EBE /* MapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
+		D0F9B06A268423AE00060EBE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D0F9B0702684440B00060EBE /* noteDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteDetailsViewModel.swift; sourceTree = "<group>"; };
 		DEB74E07F0197DF26144F547 /* Pods-Smart NotepadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart NotepadTests.release.xcconfig"; path = "Target Support Files/Pods-Smart NotepadTests/Pods-Smart NotepadTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,18 +163,16 @@
 		D05489D62682AACB002C882A /* Smart Notepad */ = {
 			isa = PBXGroup;
 			children = (
+				D0F9B0A02684A1D700060EBE /* ViewControllers */,
+				D0F9B0452683227800060EBE /* Models */,
+				D0F9B0A82684A29200060EBE /* Helpers */,
+				D0F9B0A42684A1E700060EBE /* ViewModels */,
 				D05489D72682AACB002C882A /* AppDelegate.swift */,
 				D05489D92682AACB002C882A /* SceneDelegate.swift */,
-				D0548A512682C75C002C882A /* AllNotesVC */,
 				D05489E32682AACE002C882A /* Assets.xcassets */,
 				D05489E52682AACE002C882A /* LaunchScreen.storyboard */,
 				D05489E82682AACE002C882A /* Info.plist */,
 				D05489E02682AACB002C882A /* Smart_Notepad.xcdatamodeld */,
-				D0548A172682B32B002C882A /* DB_Hnadler.swift */,
-				D0548A272682B573002C882A /* noteClass.swift */,
-				D0548A4A2682C738002C882A /* noteView */,
-				D0548A452682C205002C882A /* MainViewController.swift */,
-				D0548A552682C7A9002C882A /* AllNotesViewModel.swift */,
 			);
 			path = "Smart Notepad";
 			sourceTree = "<group>";
@@ -199,10 +207,65 @@
 		D0548A512682C75C002C882A /* AllNotesVC */ = {
 			isa = PBXGroup;
 			children = (
+				D0548A4A2682C738002C882A /* noteView */,
 				D05489DB2682AACB002C882A /* AllNotesViewController.swift */,
 				D05489DD2682AACB002C882A /* Main.storyboard */,
 			);
 			path = AllNotesVC;
+			sourceTree = "<group>";
+		};
+		D0F9B0452683227800060EBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0548A172682B32B002C882A /* DB_Hnadler.swift */,
+				D0548A272682B573002C882A /* noteClass.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D0F9B0462683228B00060EBE /* noteDetailsVC */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9B047268322A900060EBE /* noteDetailsViewController.swift */,
+				D0F9B04F268322B100060EBE /* noteDetailsViewController.storyboard */,
+			);
+			path = noteDetailsVC;
+			sourceTree = "<group>";
+		};
+		D0F9B09F2684A1B800060EBE /* GoogleMapsVC */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9B069268423AD00060EBE /* MapViewController.storyboard */,
+				D0F9B06A268423AE00060EBE /* MapViewController.swift */,
+			);
+			path = GoogleMapsVC;
+			sourceTree = "<group>";
+		};
+		D0F9B0A02684A1D700060EBE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9B0462683228B00060EBE /* noteDetailsVC */,
+				D0548A512682C75C002C882A /* AllNotesVC */,
+				D0F9B09F2684A1B800060EBE /* GoogleMapsVC */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D0F9B0A42684A1E700060EBE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D0548A552682C7A9002C882A /* AllNotesViewModel.swift */,
+				D0F9B0702684440B00060EBE /* noteDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D0F9B0A82684A29200060EBE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D0548A452682C205002C882A /* MainViewController.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,7 +378,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F9B050268322B100060EBE /* noteDetailsViewController.storyboard in Resources */,
 				D05489E72682AACE002C882A /* LaunchScreen.storyboard in Resources */,
+				D0F9B06B268423AE00060EBE /* MapViewController.storyboard in Resources */,
 				D05489E42682AACE002C882A /* Assets.xcassets in Resources */,
 				D0548A412682C1AD002C882A /* noteView.xib in Resources */,
 				D05489DF2682AACB002C882A /* Main.storyboard in Resources */,
@@ -480,9 +545,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F9B06C268423AE00060EBE /* MapViewController.swift in Sources */,
 				D0548A182682B32B002C882A /* DB_Hnadler.swift in Sources */,
+				D0F9B048268322A900060EBE /* noteDetailsViewController.swift in Sources */,
 				D05489DC2682AACB002C882A /* AllNotesViewController.swift in Sources */,
 				D0548A282682B574002C882A /* noteClass.swift in Sources */,
+				D0F9B0712684440B00060EBE /* noteDetailsViewModel.swift in Sources */,
 				D05489D82682AACB002C882A /* AppDelegate.swift in Sources */,
 				D05489DA2682AACB002C882A /* SceneDelegate.swift in Sources */,
 				D05489E22682AACB002C882A /* Smart_Notepad.xcdatamodeld in Sources */,

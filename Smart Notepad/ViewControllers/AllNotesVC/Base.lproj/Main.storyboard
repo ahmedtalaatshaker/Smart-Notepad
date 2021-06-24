@@ -17,6 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51l-YK-dd8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kNM-4K-Bfi">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="774"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kNM-4K-Bfi" firstAttribute="top" secondItem="51l-YK-dd8" secondAttribute="top" id="1EG-mS-Tv9"/>
+                                    <constraint firstAttribute="bottom" secondItem="kNM-4K-Bfi" secondAttribute="bottom" id="MWS-oL-kJK"/>
+                                    <constraint firstItem="kNM-4K-Bfi" firstAttribute="centerX" secondItem="51l-YK-dd8" secondAttribute="centerX" id="Qf8-iq-neO"/>
+                                    <constraint firstItem="kNM-4K-Bfi" firstAttribute="leading" secondItem="51l-YK-dd8" secondAttribute="leading" constant="20" id="ZQd-k4-bDe"/>
+                                    <constraint firstAttribute="trailing" secondItem="kNM-4K-Bfi" secondAttribute="trailing" constant="20" id="kFG-bu-PKx"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="uVb-NO-ePf"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="2cn-Bp-WzR"/>
+                            </scrollView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNQ-gt-DkZ">
                                 <rect key="frame" x="57" y="348" width="300" height="200"/>
                                 <subviews>
@@ -49,6 +66,9 @@
                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m2Y-AM-87a"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,23 +83,6 @@
                                     <constraint firstItem="gF9-9z-ZYd" firstAttribute="centerX" secondItem="zNQ-gt-DkZ" secondAttribute="centerX" id="hFB-J9-Vai"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="51l-YK-dd8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kNM-4K-Bfi">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="774"/>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="kNM-4K-Bfi" firstAttribute="top" secondItem="51l-YK-dd8" secondAttribute="top" id="1EG-mS-Tv9"/>
-                                    <constraint firstAttribute="bottom" secondItem="kNM-4K-Bfi" secondAttribute="bottom" id="MWS-oL-kJK"/>
-                                    <constraint firstItem="kNM-4K-Bfi" firstAttribute="centerX" secondItem="51l-YK-dd8" secondAttribute="centerX" id="Qf8-iq-neO"/>
-                                    <constraint firstItem="kNM-4K-Bfi" firstAttribute="leading" secondItem="51l-YK-dd8" secondAttribute="leading" constant="20" id="ZQd-k4-bDe"/>
-                                    <constraint firstAttribute="trailing" secondItem="kNM-4K-Bfi" secondAttribute="trailing" constant="20" id="kFG-bu-PKx"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="uVb-NO-ePf"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="2cn-Bp-WzR"/>
-                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -98,6 +101,9 @@
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Note"/>
+                                <connections>
+                                    <action selector="addNote:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNN-H6-78d"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
