@@ -35,11 +35,12 @@ class noteDetailsViewController: MainViewController,UITextViewDelegate {
         
         body.delegate = self
         body.layer.cornerRadius = 8
-        
+        noteSelectedImage.layer.cornerRadius = 8
+
         initPlaceholder()
+        fillViewWithNote()
         bindToViewModel()
         hideKeyboardWhenTappedAround()
-        fillViewWithNote()
         // Do any additional setup after loading the view.
     }
     
@@ -48,20 +49,15 @@ class noteDetailsViewController: MainViewController,UITextViewDelegate {
     }
     
     func bindToViewModel(){
-        // bind vc elemnts to view model
         noteTitle.rx.text
-            .orEmpty
+            .observe(on: MainScheduler.instance)
             .bind(to: noteDetailsVM.noteTitle)
             .disposed(by:disposeBag)
         
         body.rx.text
-            .orEmpty
+            .observe(on: MainScheduler.instance)
             .bind(to: noteDetailsVM.body)
             .disposed(by:disposeBag)
-        
-//        noteLocation.rx.text
-//            .bind(to: noteDetailsVM.noteLocation)
-//            .disposed(by:disposeBag)
     }
     
     func initPlaceholder(){
@@ -118,29 +114,33 @@ class noteDetailsViewController: MainViewController,UITextViewDelegate {
     }
     
     
-    func canSaveNote() -> (canSave:Bool,noteToSave:note){
+    func canSaveNote() -> (canSave:Bool,noteToSave:note,same:Bool){
         let image = noteSelectedImage.isHidden ? nil : noteSelectedImage.image
         let address = (noteLocation.text?.lowercased() != "Add location".lowercased() ? noteLocation.text : "") ?? ""
         
         
-        return noteDetailsVM.canSaveNote(image: image, address: address, lat: lat, lng: lng)
+        return noteDetailsVM.canSaveNote(previousNote:noteObj,image: image, address: address, lat: lat, lng: lng)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         if close{
             let canSave_note = canSaveNote()
             
-            if canSave_note.canSave{
-                if noteObj.id != nil{
-                    noteDetailsVM.updateNote(note: canSave_note.noteToSave,id:noteObj.id!, viewModel: viewModel).subscribe { (notes) in
-                        self.navigationController?.popViewController(animated: true)
-                    }.disposed(by: disposeBag)
+            if canSave_note.same {
+                self.navigationController?.popViewController(animated: true)
+            }else{
+                if canSave_note.canSave{
+                    if noteObj.id != nil{
+                        noteDetailsVM.updateNote(note: canSave_note.noteToSave,id:noteObj.id!, viewModel: viewModel).subscribe { (notes) in
+                            self.navigationController?.popViewController(animated: true)
+                        }.disposed(by: disposeBag)
 
-                }else{
-                    noteDetailsVM.addNote(note: canSave_note.noteToSave, viewModel: viewModel).subscribe { (notes) in
-                        self.navigationController?.popViewController(animated: true)
-                    }.disposed(by: disposeBag)
+                    }else{
+                        noteDetailsVM.addNote(note: canSave_note.noteToSave, viewModel: viewModel).subscribe { (notes) in
+                            self.navigationController?.popViewController(animated: true)
+                        }.disposed(by: disposeBag)
 
+                    }
                 }
             }
         }
@@ -193,17 +193,6 @@ class noteDetailsViewController: MainViewController,UITextViewDelegate {
         close = false
         noteDetailsVM.openMaps(lat: lat, lng: lng, address: noteLocation.text != "Add location" ? noteLocation.text! : "", vc: self)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension noteDetailsViewController :didSelectAddress{
@@ -211,13 +200,5 @@ extension noteDetailsViewController :didSelectAddress{
         lat = Float(latitude)
         lng = Float(longitude)
         noteLocation.text = address
-        
-        print(lat)
-        print(lng)
-        print(address)
-
-        
     }
-    
-    
 }
