@@ -44,7 +44,8 @@ class AllNotesViewController: MainViewController,CLLocationManagerDelegate {
     }
     
     func bindToViewModel(){
-        viewModel.allNotesSorted.asObservable()
+        viewModel.allNotesSorted
+            .observe(on: MainScheduler.instance)
             .subscribe { (notes) in
                 self.freeStack()
                 if notes.element?.count ?? 0 > 0{
@@ -86,8 +87,9 @@ class AllNotesViewController: MainViewController,CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("locations")
         print(locations)
+        print("authorized authorized")
+
         if let currentLocation = locations.last {
             self.viewModel.Authorized = true
             self.viewModel.currentLocation = currentLocation
@@ -104,15 +106,16 @@ class AllNotesViewController: MainViewController,CLLocationManagerDelegate {
         
         if status == .denied {
             print("denied")
-            self.viewModel.Authorized = false
-            self.viewModel.getNearestNote(Authorized: viewModel.Authorized)
             self.AlertWith2ButtonsAndActionFirstButton(title: "Allow Access to Location", message: "Please Allow Access to Location to get nearest note", VC: self, B1Action: {
                 if let url = URL(string:UIApplication.openSettingsURLString) {
                     if UIApplication.shared.canOpenURL(url) {
                         UIApplication.shared.open(url, options: [:], completionHandler: nil)
                     }
                 }
-            }, B1Title: "Settings", B2Title: "Cancel")
+            }, B1Title: "Settings", B2Action: {
+                self.viewModel.Authorized = false
+                self.viewModel.getNearestNote(Authorized: self.viewModel.Authorized)
+            }, B2Title: "Cancel")
         }
     }
     
@@ -128,6 +131,4 @@ extension AllNotesViewController:noteTapped{
         viewModel.openNoteDetails(note:noteView.getNote!,vc: self,viewModel:viewModel)
         
     }
-    
-    
 }
