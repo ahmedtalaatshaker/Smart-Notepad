@@ -19,8 +19,8 @@ class noteTable :Object{
     @objc dynamic var image = Data()
     @objc dynamic var id = Date()
     @objc dynamic var address = ""
-
-
+    
+    
     
     static func create(title:String,description:String,lat:Float,lng:Float,image:UIImage?,id:Date,address:String) -> noteTable{
         let note = noteTable()
@@ -32,7 +32,7 @@ class noteTable :Object{
         note.image = imageData
         note.id = id
         note.address = address
-
+        
         return note
     }
 }
@@ -41,7 +41,7 @@ class realmDB :NSObject{
     @objc static let shared = realmDB()
     let realm = try! Realm()
     var allNotes = [note]()
-
+    
     func write(title:String,description:String,lat:Float,lng:Float,image:UIImage?,id:Date,address:String) -> [note]{
         let noteObj = noteTable.create(title: title, description: description, lat: lat,lng:lng, image: image, id: id, address: address)
         
@@ -55,7 +55,7 @@ class realmDB :NSObject{
             single_note.image = image
             single_note.id = id
             single_note.address = address
-
+            
             allNotes.append(single_note)
         }
         
@@ -76,7 +76,7 @@ class realmDB :NSObject{
             single_note.image = imgPNG
             single_note.id = row.id
             single_note.address = row.address
-
+            
             allNotes.append(single_note)
         }
         
@@ -98,6 +98,17 @@ class realmDB :NSObject{
         return allNotes
     }
     
+    func deleteAll() {
+        let data = realm.objects(noteTable.self)
+        for row in data {
+            try? realm.write {
+                realm.delete(row)
+            }
+        }
+        allNotes.removeAll()
+    }
+    
+    
     func update(newTitle:String,newDescription:String,newLat:Float,newLng:Float,newImage:UIImage?,newId:Date,id:Date,address:String) -> [note]{
         let data = realm.objects(noteTable.self)
         for rowIndex in 0..<data.count {
@@ -112,7 +123,7 @@ class realmDB :NSObject{
                     row.image = imageData
                     row.id = newId
                     row.address = address
-
+                    
                     allNotes.remove(at: rowIndex)
                     allNotes.insert(convertRowToNote(row: row), at: rowIndex)
                 }
@@ -135,7 +146,7 @@ class realmDB :NSObject{
         single_note.image = imgPNG
         single_note.id = row.id
         single_note.address = row.address
-
+        
         return single_note
     }
     
