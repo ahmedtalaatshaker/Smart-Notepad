@@ -21,7 +21,9 @@ class allNotesViewModel{
     var disposeBag = DisposeBag()
     
     func initViewModel(){
-        self.isSorted.asObservable()
+        self.isSorted
+            .observe(on: MainScheduler.instance)
+            .take(while: {$0 != (0 != 0)})
             .subscribe { (value) in
                 if !(value.element ?? false){
                     print("getNearestNote")
@@ -33,13 +35,15 @@ class allNotesViewModel{
         allNotes = realmDB.shared.read()
     }
     
-    
     func getNearestNote(Authorized:Bool){
         if !Authorized {
-            allNotes = allNotes.sorted(by: { $0.id! < $1.id! })
+            setAllNotesNotNearest()
+            isSorted.accept(false)
+            allNotes = allNotes.sorted(by: { $0.id! > $1.id! })
             allNotesSorted.accept(allNotes)
         }else{
             if !isSorted.value && allNotes.count > 0{
+                isSorted.accept(true)
                 allNotes = calcDistance()
                 
                 var sortedNotes = allNotes.sorted(by: { $0.distanceToCurrentLocation < $1.distanceToCurrentLocation })
@@ -50,12 +54,11 @@ class allNotesViewModel{
                 }
                 
                 sortedNotes.remove(at: 0)
-                sortedNotes = sortedNotes.sorted(by: { $0.id! < $1.id! })
+                sortedNotes = sortedNotes.sorted(by: { $0.id! > $1.id! })
                 allNotes = sortedNotes
                 
                 allNotes.insert(nearestNote, at: 0)
                 
-                isSorted.accept(true)
                 allNotesSorted.accept(allNotes)
             }else if allNotes.count == 0 {
                 allNotesSorted.accept(allNotes)
@@ -69,14 +72,17 @@ class allNotesViewModel{
             let newNote = note
             let location = CLLocation(latitude: CLLocationDegrees(newNote.lat), longitude: CLLocationDegrees(newNote.lng))
             let distance = location.distance(from: currentLocation)
-            print("\(newNote.lat)" + " //// " + "\(newNote.lng)")
-            print(distance)
-            print("\(newNote.id)")
             newNote.distanceToCurrentLocation = distance
             newNote.nearest = false
             notesWithDistance.append(newNote)
         }
         return notesWithDistance
+    }
+    
+    func setAllNotesNotNearest(){
+        for note in allNotes{
+            note.nearest = false
+        }
     }
     
     func openNoteDetails(note:note = note(fromDictionary: [:]),vc:UIViewController,viewModel:allNotesViewModel){
