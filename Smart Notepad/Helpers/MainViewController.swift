@@ -16,13 +16,21 @@ class MainViewController :UIViewController{
         viewController.present(alert, animated: true, completion: nil)
     }
     
-    func AlertWith2ButtonsAndActionFirstButton(title:String , message:String,VC :UIViewController,B1Action: @escaping () -> Void,B1Title:String,B2Title:String)  {
+    func AlertWith2ButtonsAndActionFirstButton(title:String , message:String,VC :UIViewController,B1Action: @escaping () -> Void,B1Title:String,B2Action: @escaping () -> Void,B2Title:String)  {
         let alert = UIAlertController(title: title, message:  message, preferredStyle: UIAlertController.Style.alert)
         let YesLogout = UIAlertAction(title: B1Title, style: .default) { (alert: UIAlertAction!) -> Void in
             B1Action()
         }
         alert.addAction(YesLogout)
-        alert.addAction(UIAlertAction(title: B2Title, style: .default, handler: nil))
+//        alert.addAction(UIAlertAction(title: B2Title, style: .default, handler: nil))
+        
+        let cancel = UIAlertAction(title: B2Title, style: .default) { (alert: UIAlertAction!) -> Void in
+            B2Action()
+        }
+        alert.addAction(cancel)
+//        alert.addAction(UIAlertAction(title: B2Title, style: .default, handler: nil))
+        
+        
         VC.present(alert, animated: true, completion: nil)
         
     }
