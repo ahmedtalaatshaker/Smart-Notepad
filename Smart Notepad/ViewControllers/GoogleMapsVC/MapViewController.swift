@@ -70,7 +70,6 @@ class GoogleMapViewController: MainViewController{
             self.moveMarkerToLocation(location: coordinate)
             self.currentLocationLabel.text = title
             self.marker.map = self.mapView
-
         }
     }
     
@@ -145,8 +144,10 @@ extension GoogleMapViewController: CLLocationManagerDelegate, GMSMapViewDelegate
             break
         case .authorizedAlways: fallthrough
         case .authorizedWhenInUse:
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.didTapMyLocationButton(for: self.mapView)
+            if address == "" {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.didTapMyLocationButton(for: self.mapView)
+                }
             }
             print("Location status is OK.")
             break

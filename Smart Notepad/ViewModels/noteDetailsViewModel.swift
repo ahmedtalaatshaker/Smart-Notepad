@@ -123,7 +123,7 @@ class noteDetailsViewModel{
     
     
     func openMaps(lat:Float = 0.0 , lng:Float = 0.0 , address :String = "",vc :UIViewController = noteDetailsViewController()){
-        let target = UIStoryboard.init(name: "MapViewController", bundle: nil).instantiateInitialViewController() as! GoogleMapViewController
+        let target = UIStoryboard.init(name: "MapViewController", bundle: nil).instantiateViewController(identifier: "GoogleMapViewController") as! GoogleMapViewController
         
         target.lat = lat
         target.lng = lng
