@@ -33,8 +33,6 @@ class GoogleMapViewController: MainViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
-
-    
     
     func initMap() {
         locationManager = CLLocationManager()
@@ -57,7 +55,7 @@ class GoogleMapViewController: MainViewController{
             locateWithLongitude(Double(lng), andLatitude: Double(lat), andTitle: address)
         }
     }
-
+    
     var marker = GMSMarker()
     func locateWithLongitude(_ lon: Double, andLatitude lat: Double, andTitle title: String) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -76,15 +74,12 @@ class GoogleMapViewController: MainViewController{
         }
     }
     
-    
     @IBAction func confirm(_ sender: Any) {
         if (currentLocation != nil) {
             delegate?.selectAddress(latitude: (currentLocation?.latitude.magnitude)!, longitude: (currentLocation?.longitude.magnitude)!, address: currentLocationLabel.text!)
             navigationController?.popViewController(animated: true)
         }
     }
-    
-    
 }
 
 
@@ -150,6 +145,9 @@ extension GoogleMapViewController: CLLocationManagerDelegate, GMSMapViewDelegate
             break
         case .authorizedAlways: fallthrough
         case .authorizedWhenInUse:
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.didTapMyLocationButton(for: self.mapView)
+            }
             print("Location status is OK.")
             break
         }
@@ -177,6 +175,18 @@ extension GoogleMapViewController: CLLocationManagerDelegate, GMSMapViewDelegate
 
         if mapView.myLocation?.coordinate != nil {
             moveMarkerToLocation(location: (mapView.myLocation?.coordinate)!)
+        }else{
+            self.AlertWith2ButtonsAndActionFirstButton(title: "Allow Access to Location", message: "Please Allow Access to Location to get nearest note", VC: self, B1Action: {
+                if let url = URL(string:UIApplication.openSettingsURLString) {
+                    if UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                }
+            }, B1Title: "Settings", B2Action: {
+//                self.viewModel.Authorized = false
+//                self.viewModel.getNearestNote(Authorized: self.viewModel.Authorized)
+            }, B2Title: "Cancel")
+
         }
 
         return true
