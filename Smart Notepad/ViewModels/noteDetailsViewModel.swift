@@ -17,7 +17,7 @@ class noteDetailsViewModel{
     var noteLocation = BehaviorRelay<String?>(value: "")
     var noteSelectedImage = BehaviorRelay<UIImage?>(value: UIImage())
     
-    func canSaveNote(image:UIImage?,address:String,lat:Float,lng:Float) -> (canSave:Bool,noteToSave:note){
+    func canSaveNote(previousNote:note,image:UIImage?,address:String,lat:Float,lng:Float) -> (canSave:Bool,noteToSave:note,same:Bool){
         var canSave = false
         
         var newTitle = noteTitle.value
@@ -56,9 +56,34 @@ class noteDetailsViewModel{
         noteToSave.noteDescription = newDescription
         noteToSave.title = newTitle
         
-        return (canSave,noteToSave)
+        
+        return (canSave,noteToSave,compareNotes(noteToSave: noteToSave, previousNote: previousNote))
     }
     
+    func compareNotes(noteToSave:note,previousNote:note) -> (Bool){
+        var sameNotes = true
+        if noteToSave.title != previousNote.title{
+            sameNotes = false
+            return sameNotes
+        }else if noteToSave.noteDescription != previousNote.noteDescription{
+            sameNotes = false
+            return sameNotes
+        }else if noteToSave.address != previousNote.address{
+            sameNotes = false
+            return sameNotes
+        }else if noteToSave.lat != previousNote.lat{
+            sameNotes = false
+            return sameNotes
+        }else if noteToSave.lng != previousNote.lng{
+            sameNotes = false
+            return sameNotes
+        }else if noteToSave.image != previousNote.image{
+            sameNotes = false
+            return sameNotes
+        }
+        
+        return sameNotes
+    }
     
     func deleteNote(id:Date,viewModel:allNotesViewModel) -> Observable<[note]> {
         return Observable.create { (observar) -> Disposable in
