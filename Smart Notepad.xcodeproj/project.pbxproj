@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		24882A96C90CC64693042D9D /* Pods_Smart_Notepad_Smart_NotepadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C113064AD17E6CD7A85D6D7D /* Pods_Smart_Notepad_Smart_NotepadUITests.framework */; };
 		2F96A8D19705BC3C0EA4314F /* Pods_Smart_Notepad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25990B9C99EA0CCB9C21FCD7 /* Pods_Smart_Notepad.framework */; };
-		38DA527C7BE0CFFF73C6BD5C /* Pods_Smart_NotepadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1E480B224174D64540646E /* Pods_Smart_NotepadTests.framework */; };
 		D05489D82682AACB002C882A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489D72682AACB002C882A /* AppDelegate.swift */; };
 		D05489DA2682AACB002C882A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489D92682AACB002C882A /* SceneDelegate.swift */; };
 		D05489DC2682AACB002C882A /* AllNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489DB2682AACB002C882A /* AllNotesViewController.swift */; };
@@ -17,7 +16,6 @@
 		D05489E22682AACB002C882A /* Smart_Notepad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D05489E02682AACB002C882A /* Smart_Notepad.xcdatamodeld */; };
 		D05489E42682AACE002C882A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05489E32682AACE002C882A /* Assets.xcassets */; };
 		D05489E72682AACE002C882A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05489E52682AACE002C882A /* LaunchScreen.storyboard */; };
-		D05489F22682AACE002C882A /* Smart_NotepadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489F12682AACE002C882A /* Smart_NotepadTests.swift */; };
 		D05489FD2682AACE002C882A /* Smart_NotepadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05489FC2682AACE002C882A /* Smart_NotepadUITests.swift */; };
 		D0548A182682B32B002C882A /* DB_Hnadler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A172682B32B002C882A /* DB_Hnadler.swift */; };
 		D0548A282682B574002C882A /* noteClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A272682B573002C882A /* noteClass.swift */; };
@@ -25,6 +23,7 @@
 		D0548A412682C1AD002C882A /* noteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0548A402682C1AD002C882A /* noteView.xib */; };
 		D0548A462682C205002C882A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A452682C205002C882A /* MainViewController.swift */; };
 		D0548A562682C7A9002C882A /* AllNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0548A552682C7A9002C882A /* AllNotesViewModel.swift */; };
+		D0CD9B6D26854D68008CAB85 /* NotepadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD9B6C26854D68008CAB85 /* NotepadTests.swift */; };
 		D0F9B048268322A900060EBE /* noteDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9B047268322A900060EBE /* noteDetailsViewController.swift */; };
 		D0F9B050268322B100060EBE /* noteDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F9B04F268322B100060EBE /* noteDetailsViewController.storyboard */; };
 		D0F9B06B268423AE00060EBE /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F9B069268423AD00060EBE /* MapViewController.storyboard */; };
@@ -33,14 +32,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D05489EE2682AACE002C882A /* PBXContainerItemProxy */ = {
+		D05489F92682AACE002C882A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D05489CC2682AACB002C882A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D05489D32682AACB002C882A;
 			remoteInfo = "Smart Notepad";
 		};
-		D05489F92682AACE002C882A /* PBXContainerItemProxy */ = {
+		D0CD9B6F26854D68008CAB85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D05489CC2682AACB002C882A /* Project object */;
 			proxyType = 1;
@@ -58,7 +57,7 @@
 		858E73B1D8E1DCACE7277AF8 /* Pods-Smart NotepadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart NotepadTests.debug.xcconfig"; path = "Target Support Files/Pods-Smart NotepadTests/Pods-Smart NotepadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A48D0996F273A4DCE778DBE /* Pods-Smart Notepad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smart Notepad.debug.xcconfig"; path = "Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad.debug.xcconfig"; sourceTree = "<group>"; };
 		C113064AD17E6CD7A85D6D7D /* Pods_Smart_Notepad_Smart_NotepadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smart_Notepad_Smart_NotepadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D05489D42682AACB002C882A /* Smart Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Notepad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05489D42682AACB002C882A /* Notepad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notepad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05489D72682AACB002C882A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D05489D92682AACB002C882A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D05489DB2682AACB002C882A /* AllNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesViewController.swift; sourceTree = "<group>"; };
@@ -67,9 +66,6 @@
 		D05489E32682AACE002C882A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D05489E62682AACE002C882A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D05489E82682AACE002C882A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D05489ED2682AACE002C882A /* Smart NotepadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart NotepadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D05489F12682AACE002C882A /* Smart_NotepadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_NotepadTests.swift; sourceTree = "<group>"; };
-		D05489F32682AACE002C882A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D05489F82682AACE002C882A /* Smart NotepadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart NotepadUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05489FC2682AACE002C882A /* Smart_NotepadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smart_NotepadUITests.swift; sourceTree = "<group>"; };
 		D05489FE2682AACE002C882A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +75,9 @@
 		D0548A402682C1AD002C882A /* noteView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = noteView.xib; sourceTree = "<group>"; };
 		D0548A452682C205002C882A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D0548A552682C7A9002C882A /* AllNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllNotesViewModel.swift; sourceTree = "<group>"; };
+		D0CD9B6A26854D68008CAB85 /* NotepadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotepadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0CD9B6C26854D68008CAB85 /* NotepadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotepadTests.swift; sourceTree = "<group>"; };
+		D0CD9B6E26854D68008CAB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F9B047268322A900060EBE /* noteDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteDetailsViewController.swift; sourceTree = "<group>"; };
 		D0F9B04F268322B100060EBE /* noteDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = noteDetailsViewController.storyboard; sourceTree = "<group>"; };
 		D0F9B069268423AD00060EBE /* MapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
@@ -96,19 +95,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05489EA2682AACE002C882A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38DA527C7BE0CFFF73C6BD5C /* Pods_Smart_NotepadTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D05489F52682AACE002C882A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				24882A96C90CC64693042D9D /* Pods_Smart_Notepad_Smart_NotepadUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0CD9B6726854D68008CAB85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				D05489D62682AACB002C882A /* Smart Notepad */,
-				D05489F02682AACE002C882A /* Smart NotepadTests */,
 				D05489FB2682AACE002C882A /* Smart NotepadUITests */,
+				D0CD9B6B26854D68008CAB85 /* NotepadTests */,
 				D05489D52682AACB002C882A /* Products */,
 				3DC3677089DF597E382BFAAB /* Pods */,
 				CBBA9486229E4DB91334DE56 /* Frameworks */,
@@ -153,9 +151,9 @@
 		D05489D52682AACB002C882A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D05489D42682AACB002C882A /* Smart Notepad.app */,
-				D05489ED2682AACE002C882A /* Smart NotepadTests.xctest */,
+				D05489D42682AACB002C882A /* Notepad.app */,
 				D05489F82682AACE002C882A /* Smart NotepadUITests.xctest */,
+				D0CD9B6A26854D68008CAB85 /* NotepadTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,15 +173,6 @@
 				D05489E02682AACB002C882A /* Smart_Notepad.xcdatamodeld */,
 			);
 			path = "Smart Notepad";
-			sourceTree = "<group>";
-		};
-		D05489F02682AACE002C882A /* Smart NotepadTests */ = {
-			isa = PBXGroup;
-			children = (
-				D05489F12682AACE002C882A /* Smart_NotepadTests.swift */,
-				D05489F32682AACE002C882A /* Info.plist */,
-			);
-			path = "Smart NotepadTests";
 			sourceTree = "<group>";
 		};
 		D05489FB2682AACE002C882A /* Smart NotepadUITests */ = {
@@ -212,6 +201,15 @@
 				D05489DD2682AACB002C882A /* Main.storyboard */,
 			);
 			path = AllNotesVC;
+			sourceTree = "<group>";
+		};
+		D0CD9B6B26854D68008CAB85 /* NotepadTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0CD9B6C26854D68008CAB85 /* NotepadTests.swift */,
+				D0CD9B6E26854D68008CAB85 /* Info.plist */,
+			);
+			path = NotepadTests;
 			sourceTree = "<group>";
 		};
 		D0F9B0452683227800060EBE /* Models */ = {
@@ -288,27 +286,8 @@
 			);
 			name = "Smart Notepad";
 			productName = "Smart Notepad";
-			productReference = D05489D42682AACB002C882A /* Smart Notepad.app */;
+			productReference = D05489D42682AACB002C882A /* Notepad.app */;
 			productType = "com.apple.product-type.application";
-		};
-		D05489EC2682AACE002C882A /* Smart NotepadTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D0548A042682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart NotepadTests" */;
-			buildPhases = (
-				A5C56AC6A6A9076D0F78A567 /* [CP] Check Pods Manifest.lock */,
-				D05489E92682AACE002C882A /* Sources */,
-				D05489EA2682AACE002C882A /* Frameworks */,
-				D05489EB2682AACE002C882A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D05489EF2682AACE002C882A /* PBXTargetDependency */,
-			);
-			name = "Smart NotepadTests";
-			productName = "Smart NotepadTests";
-			productReference = D05489ED2682AACE002C882A /* Smart NotepadTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D05489F72682AACE002C882A /* Smart NotepadUITests */ = {
 			isa = PBXNativeTarget;
@@ -331,6 +310,24 @@
 			productReference = D05489F82682AACE002C882A /* Smart NotepadUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D0CD9B6926854D68008CAB85 /* NotepadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0CD9B7126854D68008CAB85 /* Build configuration list for PBXNativeTarget "NotepadTests" */;
+			buildPhases = (
+				D0CD9B6626854D68008CAB85 /* Sources */,
+				D0CD9B6726854D68008CAB85 /* Frameworks */,
+				D0CD9B6826854D68008CAB85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0CD9B7026854D68008CAB85 /* PBXTargetDependency */,
+			);
+			name = NotepadTests;
+			productName = NotepadTests;
+			productReference = D0CD9B6A26854D68008CAB85 /* NotepadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -343,11 +340,11 @@
 					D05489D32682AACB002C882A = {
 						CreatedOnToolsVersion = 12.2;
 					};
-					D05489EC2682AACE002C882A = {
+					D05489F72682AACE002C882A = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = D05489D32682AACB002C882A;
 					};
-					D05489F72682AACE002C882A = {
+					D0CD9B6926854D68008CAB85 = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = D05489D32682AACB002C882A;
 					};
@@ -367,8 +364,8 @@
 			projectRoot = "";
 			targets = (
 				D05489D32682AACB002C882A /* Smart Notepad */,
-				D05489EC2682AACE002C882A /* Smart NotepadTests */,
 				D05489F72682AACE002C882A /* Smart NotepadUITests */,
+				D0CD9B6926854D68008CAB85 /* NotepadTests */,
 			);
 		};
 /* End PBXProject section */
@@ -387,14 +384,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05489EB2682AACE002C882A /* Resources */ = {
+		D05489F62682AACE002C882A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05489F62682AACE002C882A /* Resources */ = {
+		D0CD9B6826854D68008CAB85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -499,28 +496,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smart Notepad/Pods-Smart Notepad-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A5C56AC6A6A9076D0F78A567 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Smart NotepadTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C9EE59A8C408E02BA4336997 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -560,14 +535,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05489E92682AACE002C882A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D05489F22682AACE002C882A /* Smart_NotepadTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D05489F42682AACE002C882A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,18 +543,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0CD9B6626854D68008CAB85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0CD9B6D26854D68008CAB85 /* NotepadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D05489EF2682AACE002C882A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D05489D32682AACB002C882A /* Smart Notepad */;
-			targetProxy = D05489EE2682AACE002C882A /* PBXContainerItemProxy */;
-		};
 		D05489FA2682AACE002C882A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D05489D32682AACB002C882A /* Smart Notepad */;
 			targetProxy = D05489F92682AACE002C882A /* PBXContainerItemProxy */;
+		};
+		D0CD9B7026854D68008CAB85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D05489D32682AACB002C882A /* Smart Notepad */;
+			targetProxy = D0CD9B6F26854D68008CAB85 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -666,6 +641,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -709,6 +685,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -720,6 +697,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -741,7 +719,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-Notepad";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Notepad;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -755,61 +733,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VGZS9T43Q9;
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = "Smart Notepad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-Notepad";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Notepad;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		D0548A052682AACE002C882A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 858E73B1D8E1DCACE7277AF8 /* Pods-Smart NotepadTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VGZS9T43Q9;
-				INFOPLIST_FILE = "Smart NotepadTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-NotepadTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Notepad.app/Smart Notepad";
-			};
-			name = Debug;
-		};
-		D0548A062682AACE002C882A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEB74E07F0197DF26144F547 /* Pods-Smart NotepadTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VGZS9T43Q9;
-				INFOPLIST_FILE = "Smart NotepadTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DigitalWellnez.Smart-NotepadTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smart Notepad.app/Smart Notepad";
 			};
 			name = Release;
 		};
@@ -855,6 +788,46 @@
 			};
 			name = Release;
 		};
+		D0CD9B7226854D68008CAB85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VGZS9T43Q9;
+				INFOPLIST_FILE = NotepadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DigitalWellnez.NotepadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notepad.app/Notepad";
+			};
+			name = Debug;
+		};
+		D0CD9B7326854D68008CAB85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VGZS9T43Q9;
+				INFOPLIST_FILE = NotepadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DigitalWellnez.NotepadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notepad.app/Notepad";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -876,20 +849,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0548A042682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart NotepadTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0548A052682AACE002C882A /* Debug */,
-				D0548A062682AACE002C882A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D0548A072682AACE002C882A /* Build configuration list for PBXNativeTarget "Smart NotepadUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0548A082682AACE002C882A /* Debug */,
 				D0548A092682AACE002C882A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0CD9B7126854D68008CAB85 /* Build configuration list for PBXNativeTarget "NotepadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0CD9B7226854D68008CAB85 /* Debug */,
+				D0CD9B7326854D68008CAB85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
